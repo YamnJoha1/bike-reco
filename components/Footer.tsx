@@ -1,5 +1,3 @@
-import Link from "next/link"
-
 const Footer = () => {
   return (
     <footer className="flex  text-black-100 mt-5 border-t border-gray-100">

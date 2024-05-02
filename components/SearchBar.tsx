@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import Image from 'next/image';
+import { useState, useEffect } from 'react';
 import CustomButton from './CustomButton';
 
 interface Bike {
