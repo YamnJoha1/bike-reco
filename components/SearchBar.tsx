@@ -23,12 +23,14 @@ const SearchBar: React.FC = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('https://bikeindex.org/api/v3/search?page=1&per_page=10&location=munich&stolensses=stolen');
-      setBikes(response.data.bikes);
+      const response = await fetch('https://bikeindex.org/api/v3/search?page=1&per_page=10&location=munich&stolensses=stolen');
+      const result  = await response.json();
+      setBikes(result.bikes);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
   };
+  
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
